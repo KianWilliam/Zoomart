@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.x" type="plugin" group="content" method="upgrade">
+	<name>Content - ZoomArt</name>
+	<author>KWProductions Co.</author>
+	<creationDate>Jan 12 2021</creationDate>
+	<copyright>(C) 2020-2025.Kian William Productions Co. All rights reserved.</copyright>
+	<authorEmail>webarchitect@kwproductions121.com</authorEmail>
+	<authorUrl>https://kwproductions121.com</authorUrl>
+	<version>1.0.0</version>
+    <license>GNU General Public License version 2 or later</license>
+	<description><![CDATA[ This plugin is developed by <a href="https://kwproductions121.com">KWProductions Co.</a> In case of any problem contact us: webarchitect@kwproductions121.com <br />. ]]></description>
+    <scriptfile>install.script.php</scriptfile>
+	<files>
+		<filename plugin="zoomart">zoomart.php</filename>		
+		<filename>index.html</filename>
+		<folder>lib</folder>		
+	</files>
+     <languages folder="language">        
+        <language tag="en-GB">en-GB/en-GB.plg_content_zoomart.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_content_zoomart.sys.ini</language>
+    </languages>	
+	<updateservers>
+		<server type="collection" name="zoomart"><![CDATA[https://www.extensions.kwproductions121.com/myextensions.xml]]></server>
+     </updateservers>
+	<config>
+		<fields name="params">
+			<fieldset name="basic"> 
+                <field name="onoff" type="radio" default="on" label="PLG_CONTENT_ZOOMART_ONOFF_LABEL" description="PLG_CONTENT_ZOOMART_ONOFF_DESC">
+					<option value="on">ON</option>
+					<option value="off">OFF</option>
+                </field>					
+				<field name="exclude" type="text"  label="PLG_CONTENT_ZOOMART_EXCLUDE_LABEL" description="PLG_CONTENT_ZOOMART_EXCLUDE_DESC" />
+			    <field name="magnifier" type="text"  label="PLG_CONTENT_ZOOMART_MAGNIFIER_LABEL" description="PLG_CONTENT_ZOOMART_MAGNIFIER_DESC" default="2" />
+                <field name="zwpos" type="radio" default="2" label="PLG_CONTENT_ZOOMART_ZWPOS_LABEL" description="PLG_CONTENT_ZOOMART_ZWPOS_DESC">
+					<option value="0">TOP-LEFT</option>
+					<option value="1">TOP-RIGHT</option>
+                    <option value="2">BOTTOM-LEFT</option>
+				    <option value="3">BOTTOM-RIGHT</option>
+                </field>
+				<field name="zoomwindoww" type="text"  label="PLG_CONTENT_ZOOMART_ZOOMWW_LABEL" description="PLG_CONTENT_ZOOMART_ZOOMWW_DESC" default="250" />
+				<field name="zoomwindowh" type="text"  label="PLG_CONTENT_ZOOMART_ZOOMWH_LABEL" description="PLG_CONTENT_ZOOMART_ZOOMWH_DESC" default="250" />
+
+				 <field name="jQuery" type="radio" default="0" label="PLG_CONTENT_ZOOMART_JQUERY_LABEL" description="PLG_CONTENT_ZOOMART_JQUERY_DESC">
+					<option value="0">NO</option>
+					<option value="1">YES</option>
+                </field>
+				<field name="bordercolor" type="color"  label="PLG_CONTENT_ZOOMART_BORDERCOLOR_LABEL" description="PLG_CONTENT_ZOOMART_BORDERCOLOR_DESC" />
+				<field name="bordersize" type="text"  label="PLG_CONTENT_ZOOMART_BORDERSIZE_LABEL" description="PLG_CONTENT_ZOOMART_BORDERSIZE_DESC" default="5" />
+				<field name="buttoncolor" type="color"  label="PLG_CONTENT_ZOOMART_BUTTONCOLOR_LABEL" description="PLG_CONTENT_ZOOMART_BUTTONCOLOR_DESC" />
+				<field name="buttonbkcolor" type="color"  label="PLG_CONTENT_ZOOMART_BUTTONBKCOLOR_LABEL" description="PLG_CONTENT_ZOOMART_BUTTONBKCOLOR_DESC" />
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
